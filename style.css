@@ -1,0 +1,361 @@
+body {
+    background: #efefef;
+    margin: 0;
+    font-family: poppins;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: orange;
+    padding: 10px 5%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 160px;
+    margin-right: 45px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-left ul img {
+    width: 25px;
+    margin: 0 15px;
+}
+
+.nav-user-icon img {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-user-icon
+{
+    margin-left: 30px;
+}
+
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+
+.left-sidebar
+{
+    flex-basis: 25%;
+    position: sticky;
+    top: 50px;
+    align-self: flex-start;
+
+}
+
+.main-content
+{
+    flex-basis: 47%;
+
+}
+
+.right-sidebar
+{
+    flex-basis: 25%;
+    position: sticky;
+    top: 50px;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.imp-links a, .shortcut-links a
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: black;
+    width: fit-content;
+}
+
+.imp-links a img
+{
+    width: 25px;
+    margin-right: 15px;
+}
+
+.imp-links
+{
+    border-bottom: 1px solid orange;
+}
+
+.shortcut-links a img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.shortcut-links p
+{
+    margin: 25px 0;
+    color: black;
+}
+
+.title a
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: black;
+    width: fit-content;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.recipe-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.favorite-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: orange;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: orange;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.2);
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+.submit-button {
+    padding: 10px 15px;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: darkorange;
+}
+
+.search-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2em;
+}
+
+.search-box input {
+    font-size: 1em;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.search-box button {
+    font-size: 1em;
+    background-color: whitesmoke;
+    border: none;
+    font-weight: 600;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+#result img {
+    display: block;
+    width: 50%;
+    margin: 1.8em auto 0 auto;
+}
+
+.details {
+    background-color: orange;
+    position: relative;
+    margin: -4.3em 0 0 0;
+    text-align: center;
+    padding: 0.6em 0;
+}
+
+.details h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.details h4 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#show-recipe {
+    font-size: 1em;
+    position: relative;
+    left: 75%;
+    padding: 0.9em 0.6em;
+    background-color: orange;
+    border: none;
+    top: 1.5em;
+    border-radius: 0.3em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#recipe {
+    position: absolute;
+    background-color: #ffffff;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 0.6em;
+    display: none;
+}
+
+#recipe pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2.5em 1.2em 1.2em 1.2em;
+    font-size: 0.92em;
+    color: #303040;
+}
+
+#hide-recipe {
+    font-size: 1em;
+    position: relative;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: orange;
+    border: none;
+    top: 1.2em;
+    left: 90%;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+ul {
+    font-size: 1em;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.8em 1.1em;
+    padding: 1.2em 0 0 1.2em;
+    color: #303040;
+    text-transform: capitalize;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 1.8em;
+    color: #202030;
+}

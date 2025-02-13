@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="foodienetworkLogo.png" class="logo" alt="Logo">
+            <ul>
+                <li><img src="icons8-notification-50.png" alt="Notifications"></li>
+                <li><img src="icons8-plus-50.png" alt="Add"></li>
+                <li><img src="icons8-pictures-folder-50.png" alt="Gallery"></li>
+            </ul>
+        </div>
+            <div class="nav-user-icon">
+                <img src="icons8-test-account-80.png" alt="User">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!---------------left-sidebar------------------ -->
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="https://www.bing.com/search?qs=MT&pq=trending+rec&sk=CSYN1&sc=16-12&q=trending+recipes&cvid=eb60a1a0301a453eb1a5dcce431da6a2&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDc2MDlqMGo5qAIIsAIB&FORM=ANAB01&PC=ACTS"><img src="icons8-trending-32 (1).png">Trending Recipes</a>
+                <a href="https://youtube.com/playlist?list=PLpfv1AIjenVMmT7iRx6Nwu6uG6A9gSD0j&si=gxEVZU_L7I1fBvCD"><img src="icons8-video-32 (1).png">Watch</a>
+            </div>
+            <div class="shortcut-links">
+                <p>Your Recipe Shortcuts</p>
+                <div id="favorite-recipes">
+
+                </div>
+            </div>
+        </div>
+
+        <!---------------main content------------------ -->
+        
+        <div class="main-content">
+            <h1>Search for a Recipe</h1>
+             
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Enter a recipe..." id="userInput">
+                        <button id="searchBtn">Search</button>
+                    </div>
+                    <div id="result"></div>
+                </div>
+            <div class="form-container">
+                <h2>Create a New Recipe</h2>
+                <form id="recipeForm" class="styled-form">
+                    <div class="form-group">
+                        <label for="recipeName">Recipe Name</label>
+                        <input type="text" id="recipeName" placeholder="Enter Recipe Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeIngredients">Ingredients</label>
+                        <textarea id="recipeIngredients" placeholder="List ingredients, separated by commas" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeInstructions">Instructions</label>
+                        <textarea id="recipeInstructions" placeholder="Write cooking instructions" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeImage">Upload Recipe Image</label>
+                        <input type="file" id="recipeImage" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="submit-button">Add Recipe</button>
+                </form>
+            </div>
+                        
+
+            <h2>Your Recipes</h2>
+            <div id="recipes">
+               
+            </div>
+        </div>
+
+        <!---------------right-sidebar------------------ -->
+        <div class="right-sidebar">
+            <div class="title">
+                <h4>Your Socials</h4>
+                <a href="https://facebook.com"><img src="images/icons8-facebook-logo-32.png">Facebook</a>
+                <a href="https://pinterest.com"><img src="images/icons8-pinterest-32.png">Pinterest</a>
+                <a href="https://instagram.com"><img src="images/icons8-instagram-32.png">Instagram</a>
+                <a href="https://x.com"><img src="images/icons8-x-32.png">X</a>
+                <a href="https://youtube.com"><img src="images/icons8-youtube-32.png">YouTube</a>
+            </div>
+            <div id="recipes-container">
+              
+                <h1>Recipe Book</h1>
+                <div id="recipes"></div>
+                <button id="viewShoppingList">View Shopping List</button>
+            </div>
+        
+            <div id="shopping-list-container" style="display: none;">
+                
+                <h1>Shopping List</h1>
+                <ul id="shoppingList"></ul>
+                <button id="clearShoppingList">Clear Shopping List</button>
+                <button onclick="goBackToRecipes()">Back to Recipes</button>
+            </div>
+        </div>
+    </div>
+
+  
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalRecipeName"></h2>
+            <p><strong>Ingredients:</strong></p>
+            <ul id="modalIngredients"></ul>
+            <p><strong>Instructions:</strong></p>
+            <p id="modalInstructions"></p>
+            <button id="addToShoppingList">Add to Shopping List</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
