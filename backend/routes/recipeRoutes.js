@@ -42,7 +42,7 @@ router.get("/my-recipes", authMiddleware, async (req, res) => {
 
     res.json(recipes);
   } catch (error) {
-    console.error("❌ Error fetching user recipes:", error);
+    console.error("Error fetching user recipes:", error);
     res.status(500).json({ error: "Error fetching user recipes" });
   }
 });
@@ -69,7 +69,7 @@ router.post("/", authMiddleware, async (req, res) => {
     await newRecipe.save();
     res.status(201).json(newRecipe);
   } catch (error) {
-    console.error("❌ Error adding recipe:", error);
+    console.error("Error adding recipe:", error);
     res.status(500).json({ error: "Error adding recipe" });
   }
 });
