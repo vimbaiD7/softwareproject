@@ -8,12 +8,12 @@ export const loginUser = async (email, password) => {
 
     if (response.data.token) {
       localStorage.setItem("token", response.data.token); 
-      console.log("✅ Token saved:", response.data.token);
+      console.log("Token saved:", response.data.token);
     }
 
     return response.data;
   } catch (error) {
-    console.error("❌ Login failed:", error);
+    console.error("Login failed:", error);
     throw error;
   }
 };
